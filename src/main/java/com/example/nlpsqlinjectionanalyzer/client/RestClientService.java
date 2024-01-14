@@ -24,7 +24,7 @@ public class RestClientService {
 
     public String runQuery(String input) {
         StringBuilder allInfo = new StringBuilder();
-        String url = "http://localhost:8080/users/" + input;
+        String url = "http://localhost:8080/" + input;
         logger.info("Calling safe");
         String result = restTemplate.getForObject(url, String.class);
         logger.info("Received :" + result);
